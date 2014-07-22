@@ -16,7 +16,7 @@ int checkout(string& neck, int index) {
     int i = index;
     int result = 0;
     char next;
-    char stan = neck[i];
+    char standard = neck[i];
 
     do {
         if (i == neck.length() - 1) {
@@ -30,22 +30,22 @@ int checkout(string& neck, int index) {
         if (result == neck.length()) {
             return result;
         }
-    }while(next == stan || next == 'w');
+    }while(next == standard || next == 'w');
 
     i = index;
     do {
         if (i == 0) {
-            stan = neck[neck.length() - 1];
+            standard = neck[neck.length() - 1];
             i = neck.length();
         }else {
-            stan = neck[i - 1];
+            standard = neck[i - 1];
         }
         --i;
         if (result == neck.length()) {
             return result;
         }
         ++result;
-    }while(stan == 'w');
+    }while(standard == 'w');
 
     do {
         if (i == 0) {
@@ -55,7 +55,7 @@ int checkout(string& neck, int index) {
             next = neck[i - 1];
         }
         --i;
-        if (!(next == stan || next == 'w') || result == neck.length()) {
+        if (!(next == standard || next == 'w') || result == neck.length()) {
             return result;
         }
         ++result;
