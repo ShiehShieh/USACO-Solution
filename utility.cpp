@@ -30,7 +30,6 @@ bool isPrime(int x)
 	int e = (int)sqrt(x);
 	if (x == 1)
 	{
-		/* code */
 		return false;
 	}
 	for(int i = 2; i <= e; ++i)
@@ -127,7 +126,6 @@ void createFirst(string name, vector<char>& N, int index, vector<string>& result
 int knapsack(int n, int w, int** triangle, int** result) {
 	if (n == R - 1)
 	{
-		/* code */
 		return 0;
 	}
 
@@ -151,6 +149,38 @@ int max(int a, int b) {
 		return a;
 
 	}
+}
+
+
+int binaryToDecimal(string str) {
+	int result = 0;
+
+	for (int i = 0; i < str.length(); ++i)
+	{
+		if (str[i] == '1')
+		{
+			result += pow(2, str.length() - i - 1);
+		}
+	}
+
+	return result;
+}
+
+
+string decimalToBinaryStirng(int input) {
+	int carry = 0, output = 0;
+	string result;
+
+	output = input % 2;
+	carry = input / 2;
+	while(carry) {
+		result += output + '0';
+		output = carry % 2;
+		carry = carry / 2;
+	}
+	result += output + '0';
+
+	return result.substr();
 }
 
 
