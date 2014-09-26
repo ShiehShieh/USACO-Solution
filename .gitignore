@@ -1,4 +1,5 @@
 .DS_Store
+main
 *.pbxproj
 *.xcworkspacedata
 *.xcuserstate
